@@ -1,0 +1,95 @@
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0 , 0, 0, .9);
+  z-index: 1;
+}
+
+.modal-window {
+  position: absolute;
+  top: 0px;
+  right: 10%;
+  left: 10%;
+  z-index: 10;
+}
+
+.modal-window .title {
+  background-color: #0076ba;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-window .title span {
+  color: #fff;
+}
+
+.modal-window .title .title-text {
+  font-size: 25px;
+  color: fff;
+}
+
+.modal-window .title .title-inputs {
+  margin: 10px 20px;
+}
+
+.modal-window .title .title-button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ddd;
+  color: #ddd;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  font-size: 25px;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+.modal-window .title .title-button:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.modal-window .content {
+  overflow: hidden;
+  background-color: white;
+  padding: 90px 20px 20px 20px;
+}
+
+/* For ChartModal */
+.title-inputs big {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.title-inputs input.title-inputs-range {
+  padding: 8px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  width: 11em;
+  text-align: center;
+}
+
+.title-inputs-start:focus, .title-inputs-end:focus {
+  border-color: #46A5F5;
+}
+
+.title-inputs-picker {
+  position: absolute;
+  z-index: 1000;
+  left: 10px;
+  opacity: 0;
+  z-index: -20;
+  transition: all 0.25s;
+}
+
+.title-inputs-picker-visible {
+  opacity: 1;
+  z-index: 1000;
+}
+

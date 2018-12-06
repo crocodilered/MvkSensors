@@ -1,0 +1,60 @@
+.time-wheel {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 7px 15px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(0, 0, 0, .4);
+}
+
+.time-wheel .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-wheel button {
+  height: 30px;
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  outline: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.time-wheel button:active {
+  color: #0076ba;
+  border-color: #0076ba;
+}
+
+.time-wheel .play-button {
+  width: 30px;
+}
+
+.time-wheel .play-button::before {
+  content: '▶';
+}
+
+.time-wheel .play-button.active::before {
+  content: '❚❚';
+}
+
+.time-wheel .range {
+  width: 300px;
+  display: block; /*  to remove spacing */
+}
+
+.time-wheel .range {
+  margin: 0 7px 0 10px;
+}
+
+.time-wheel .label {
+  margin: 0 30px 0 0px;
+  text-align: left;
+}

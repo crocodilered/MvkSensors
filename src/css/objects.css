@@ -1,0 +1,163 @@
+.intake, .title, .sensor {
+  position: absolute;
+  font-size: 12px;
+}
+
+.intake {
+  border: 2px solid #0076ba;
+  border-radius: 7px;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: white;
+  min-width: 105px;
+  max-width: 150px;
+}
+
+.intake hr {
+  margin: 3px 0;
+  border-width: 1px 0 0 0;
+  border-style: dotted;
+  border-color: silver;
+}
+
+.title {
+  text-align: center;
+}
+
+.sensor {
+  border: 2px solid #222;
+  width: 20px;
+  height: 20px;
+  background-image: url('/i/sensor-bg.png');
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.sensor .indicator {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  position: absolute;
+  display: none;
+  border: 1px solid #aaa;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.sensor .indicator.norm {
+  background: #0f0;
+  display: inherit;
+  animation: blinker 1.5s linear infinite;
+  border-color: #090;
+}
+
+.sensor .indicator.error {
+  background: #f00;
+  display: inherit;
+  animation: blinker .5s linear infinite;
+  border-color: #900;
+}
+
+/* Sensor Dialog */
+
+.sensor-dialog {
+  position: absolute;
+  z-index: 100;
+  width: 180px;
+  background-color: rgba(0, 0, 0, .95);
+  color: #fff;
+  border-radius: 7px;
+}
+
+.sensor-dialog .sensor-dialog-title,
+.sensor-dialog .sensor-dialog-footer {
+  border-style: solid ;
+  border-color: rgba(0, 0, 0, .95);
+  transition: border-color .5s;
+}
+
+.sensor-dialog-title {
+  border-width: 0 0 1px 0;
+}
+
+.sensor-dialog-footer {
+  border-width: 1px 0 0 0;
+}
+
+.sensor-dialog.pinned .sensor-dialog-title,
+.sensor-dialog.pinned .sensor-dialog-footer {
+  border-color: #555;
+}
+
+.sensor-dialog.pinned button {
+  opacity: 1;
+}
+
+.sensor-dialog-title button,
+.sensor-dialog-footer button {
+  border-width: 0;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  display: block;
+  float: right;
+  margin: 3px 3px 3px 0;
+  border-radius: 3px;
+  background-color: black;
+  background-size: auto 100%;
+  background-image: url('/i/sensor-dialog-icons.png');
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.sensor-dialog-button-close {
+  background-position-x: -22px;
+}
+
+.sensor-dialog-button-close:hover {
+  background-position-x: 0;
+}
+
+.sensor-dialog-button-prefs {
+  background-position-x: -66px;
+}
+
+.sensor-dialog-button-prefs:hover {
+  background-position-x: -44px;
+}
+
+.sensor-dialog-button-chart {
+  background-position-x: -110px;
+}
+
+.sensor-dialog-button-chart:hover {
+  background-position-x: -88px;
+}
+
+.sensor-dialog-body {
+  margin: 10px 15px;
+}
+
+.sensor-dialog-body .row {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sensor-dialog-body .row .label,
+.sensor-dialog-body .row .value {
+  padding: 4px 0;
+  white-space: nowrap;
+  padding: 4px 5px;
+  border-radius: 4px;
+}
+
+.sensor-dialog-body .row .value.error {
+  background-color: #c00;
+}
