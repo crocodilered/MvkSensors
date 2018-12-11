@@ -2,8 +2,8 @@ import Highcharts from 'highcharts'
 
 class PressureChart {
 
-  constructor (elemId) {
-    Highcharts.chart(elemId, {
+  constructor (elem) {
+    Highcharts.chart(elem, {
       title: { text: '' },
       
       xAxis: {

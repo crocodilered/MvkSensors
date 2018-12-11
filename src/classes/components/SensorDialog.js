@@ -44,9 +44,9 @@ class SensorDialog {
 
   showChart () {
     this.chartModal = this.chartModal || new ChartModal()
-    this.chartModal.contentElem.innerHTML = '<div id="highcharts1-wrapper"></div><div id="highcharts2-wrapper"></div>'
-    const chart1 = new OutgoChart('highcharts1-wrapper')
-    const chart2 = new PressureChart('highcharts2-wrapper')
+    this.chartModal.contentElem.innerHTML = '<div class="highcharts1-wrapper"></div><div class="highcharts2-wrapper"></div>'
+    new OutgoChart(this.chartModal.contentElem.getElementsByClassName('highcharts1-wrapper')[0])
+    new PressureChart(this.chartModal.contentElem.getElementsByClassName('highcharts2-wrapper')[0])
     this.chartModal.periodPicker.setState({ start: new Date('5/1/2019'), end: new Date('5/8/2019') })
     this.hide()
     this.chartModal.show()
@@ -80,7 +80,6 @@ class SensorDialog {
   }
 
   set errors (errors) {
-    console.log(1)
     errors.outgo
       ? this.elem.getElementsByClassName('sensor-dialog-outgo-value')[0].classList.add('error')
       : this.elem.getElementsByClassName('sensor-dialog-outgo-value')[0].classList.remove('error')
