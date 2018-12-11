@@ -48,7 +48,7 @@ class TimeWheel {
     // Once per *** call onTickHandler
     this.timer = setInterval(() => {
       this.onChangeHandler(this.inputElem.value++)
-    }, 100)
+    }, 1000)
   }
 
   pause () {
