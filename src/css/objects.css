@@ -22,6 +22,8 @@
 
 .title {
   text-align: center;
+  padding: 3px 5px;
+  background: rgba(255, 255, 255, .7);
 }
 
 .sensor {
