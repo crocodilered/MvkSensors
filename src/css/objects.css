@@ -36,10 +36,10 @@
 }
 
 .sensor .indicator {
-  top: 5px;
-  left: 5px;
-  width: 8px;
-  height: 8px;
+  top: 1px;
+  right: 1px;
+  width: 6px;
+  height: 6px;
   border-radius: 8px;
   position: absolute;
   display: none;

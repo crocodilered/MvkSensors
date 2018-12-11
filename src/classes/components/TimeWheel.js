@@ -16,18 +16,21 @@ class TimeWheel {
     this.elem.className = 'time-wheel'
     this.elem.innerHTML = `
       <div class="row">
+        <div style="width: 300px"></div>
         <div>
-          <button class="play-button"></button>
+          <div class="row">
+            <button class="play-button"></button>
+            <input class="range" type="range" min="1" max="${pointsCount}" value="1">
+            <label></label>
+          </div>
         </div>
-        <div><input class="range" type="range" min="1" max="${pointsCount}" value="1"></div>
-        <div class="label"></div>
-        <div>
+        <div style="width: 300px; text-align: center; white-space: nowrap;">
           <button class="error-button">Ошибка</button>
           <button class="norm-button">Норм</button>
         </div>
       </div>
     `
-    this.labelElem = this.elem.getElementsByClassName('label')[0]
+    this.labelElem = this.elem.getElementsByTagName('label')[0]
 
     this.inputElem = this.elem.getElementsByClassName('range')[0]
     this.inputElem.addEventListener('input', () => { this.onChangeHandler(this.inputElem.value) })
@@ -66,7 +69,7 @@ class TimeWheel {
     let i = date.getMinutes()
     if (i < 10) i = '0' + i
 
-    this.labelElem.innerHTML = date.toLocaleDateString() + `${h}:${i}`
+    this.labelElem.innerHTML = date.toLocaleDateString() + ` ${h}:${i}`
   }
 
 }

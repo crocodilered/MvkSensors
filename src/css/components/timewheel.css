@@ -51,7 +51,31 @@
 }
 
 .time-wheel .range {
-  margin: 0 7px 0 10px;
+  margin: 0 10px 0 10px;
+  -webkit-appearance: none;
+}
+
+.time-wheel .range:focus {
+  outline: none;
+}
+
+.time-wheel .range::-webkit-slider-thumb {
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-top: -6px;
+}
+
+.time-wheel .range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: white;
+  border: 0;
 }
 
 .time-wheel .label {
