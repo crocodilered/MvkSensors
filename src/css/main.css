@@ -19,17 +19,8 @@ h1 {
   font-weight: normal;
 }
 
-body.sensors h1 {
-  display: none;
-}
-
-body.sensors #container {
-  width: 100%;
-  height: 100%;
-}
-
-body.index #container {
-  
+#container {
+  opacity: 1!important;
 }
 
 body.index #container .input {
@@ -95,4 +86,13 @@ body.index #container .layout {
   width: 20%;
   min-width: 300px;
   max-width: 40%;
+}
+
+body.sensors h1 {
+  display: none;
+}
+
+body.sensors #container {
+  width: 100%;
+  height: 100%;
 }
